@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Canvas for drawing -->
+        <canvas id="canvas"></canvas>
+
+        <!-- Tool Bar -->
+        <div id="tool-bar">
+            <div id="tools">
+                <input type="color" id="color-picker" value="#000000" title="Pick color">
+                <input type="range" id="size" min="1" max="50" value="5" title="Line Size">
+                <select id="tool" title="Select Tool">
+                    <option value="pen">Pen</option>
+                    <option value="line">Line</option>
+                    <option value="rect">Rectangle</option>
+                    <option value="circle">Circle</option>
+                    <option value="eraser">Eraser</option>
+                    <option value="fill">Fill</option>
+                </select>
+                <input type="color" id="bg-color-picker" value="#ffffff" title="Pick Background Color">
+            </div>
+
+            <div id="controls">
+                <button id="undo-button" title="Undo">↩️</button>
+                <button id="redo-button" title="Redo">🔁</button>
+                <button id="clear-button" title="Clear">🧹</button>
+                <button id="save-button" title="Save">💾</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

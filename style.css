@@ -1,0 +1,111 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* App container for centering */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 5px solid #4CAF50; /* Outer border added */
+}
+
+/* Canvas style */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: white;
+    cursor: crosshair;
+}
+
+/* Tool bar */
+#tool-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Tools section */
+#tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Controls section (buttons) */
+#controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Color picker */
+input[type="color"] {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+/* Range slider (line size) */
+input[type="range"] {
+    width: 80px;
+    cursor: pointer;
+}
+
+/* Selected tool indicator */
+#tool {
+    font-size: 16px;
+    padding: 5px;
+    background-color: #444;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Active tool highlight */
+#tool-bar select,
+#tool-bar input {
+    background-color: #444;
+    color: white;
+    border-radius: 4px;
+}
